@@ -1,26 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+  <sale-header :background="background" :color="color" :tabs="tabs"></sale-header>
+  
+<router-view></router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SaleHeader from "@/components/SaleHeader";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {SaleHeader}, 
+  data(){
+    return {
+      tabs: [
+        {name: 'Каталог', path:'/catalog'},
+        {name: 'Корзина', path:'/basket'},
+        {name: 'Авторизация', path:'/authorization'},
+      ],
+      background: "grey",
+      color: "white"
+          }
+        }
 }
 </script>
-
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  
+  color: #ecf0f3;
 }
+
+
 </style>

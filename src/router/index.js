@@ -8,24 +8,9 @@ const routes = [
  component: () => import('../views/Catalog.vue'),
  children: [
    {
-     path: 'computers',
-     component: () => import('../views/catalog/Computers.vue'),
-     children: [
-       {
-         name: 'model',//  имя маршрута
-         path:'model/:category',
-         component: () => import('../views/catalog/Model.vue')
-       },
-
-     ]
-   },
-  {
-    path: 'monitors',
-    component: () => import('../views/catalog/Monitors.vue')
-   },
- {
-    path: 'notebooks',
-    component: () => import('../views/catalog/Notebooks.vue')
+     path: ':category',
+     component: () => import('../views/catalog/Model.vue'),
+    
    }
  ]
 },

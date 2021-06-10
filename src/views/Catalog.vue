@@ -1,13 +1,13 @@
 <template>
   <!-- qwd -->
-  <div>
+  <div  >
       Категории
-  </div>
-  <sale-header background="grey"  :tabs="tabs" size="20px"></sale-header>
+  </div >
+  <sale-header background="grey"  :tabs="tabs" size="18px" direction="column"></sale-header>
   <router-view></router-view>
 </template>
 
-<script>
+<script >
 import SaleHeader from "@/components/SaleHeader";
 export default {
 name: "Catalog",

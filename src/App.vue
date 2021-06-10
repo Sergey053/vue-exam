@@ -1,6 +1,6 @@
 <template>
   <div>
-  <sale-header :background="background" :color="color" :tabs="tabs"></sale-header>
+  <sale-header :background="background" :color="color" :tabs="tabs" direction="row"></sale-header>
   
 <router-view></router-view>
   </div>

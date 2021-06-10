@@ -1,5 +1,5 @@
 <template>
-  <nav :style="{backgroundColor: background}">
+  <nav :style="{backgroundColor: background, flexDirection: direction}">
       <router-link v-for="tab in tabs" :key="tab.path" :to="tab.path" :style="{fontSize: size}">
           {{tab.name}}
       </router-link>
@@ -12,7 +12,8 @@ name: "SaleHeader",
 props: {
     background: String,
     tabs: Array,
-    size:String
+    size:String,
+    direction: String
 }
 
 }

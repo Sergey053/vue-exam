@@ -15,7 +15,8 @@
       <td>
     <button class="button is-success"
         @click="deleteOfCart(bask)">Удалить из корзины</button>
-   
+   </td>
+ </div>
 </template>
 
 <script>
@@ -25,7 +26,12 @@ computed: {
   basketArr(){
    return this.$store.state.basket;
 }
-}
+},
+methods : {
+    deleteOfCart (bask) {
+      this.state.$remove(bask)
+    }
+  }
 
 }
 

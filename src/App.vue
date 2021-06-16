@@ -26,8 +26,11 @@ export default {
 </script>
 <style>
 #app {
-  
-  color: #ecf0f3;
+  color: #787c88;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  /* height: 100vh; */
 }
 
 

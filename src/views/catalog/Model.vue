@@ -1,7 +1,7 @@
 <template>
 <div class="black margin text" v-for="mod in model" :key="mod.id">
   <div class="text" >
-    {{ $route.params.category }}
+    <!-- {{ $route.params.category }} -->
   <h3>{{mod.title.toUpperCase() }}</h3>
   </div>
   <div>

@@ -1,9 +1,16 @@
 <template>
-  <nav :style="{backgroundColor: background, flexDirection: direction}">
-      <router-link v-for="tab in tabs" :key="tab.path" :to="tab.path" :style="{fontSize: size}">
+<div class="header" >
+    <!-- <div>
+        <router-link to="/" class="name">HOME</router-link>
+    </div> -->
+   
+  <nav class="nav">
+      <router-link class="nav_item" v-for="tab in tabs" :key="tab.path" :to="tab.path" >
           {{tab.name}}
       </router-link>
   </nav>
+ 
+  </div>
 </template>
 
 <script>
@@ -12,32 +19,40 @@ name: "SaleHeader",
 props: {
     background: String,
     tabs: Array,
-    size:String,
-    direction: String
+  
 }
 
 }
 </script>
 
 <style scoped>
-.router-link-active {
-    background-color: orangered;
-    
-}
-nav {
-        display: flex;
-        justify-content: space-around;
-        color: whitesmoke;
+ .nav_item:hover{
+        background-color: #f35906;
     }
 
-nav a { /* а - это router-link*/
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background: #787c88;
+        height: 4rem;
+        padding: 0 3rem;
+        border: 2px solid #f35906;
+    }
+    nav{
+        width: 50%;
+        display: flex;
+        flex: column;
+    }
+    nav a{
         flex: 1;
+        color: #f5f5f5;
+        font-size: 1.5rem;
         text-decoration: none;
         padding-top: 1rem;
         padding-bottom: 1rem;
         text-align: center;
-        color: whitesmoke;
+        
     }
-
-
+    
 </style>

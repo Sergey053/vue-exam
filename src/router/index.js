@@ -32,6 +32,12 @@ const routes = [
 {
 path: '/404',
 component: () => import('../views/NotFound.vue')
+},
+{
+  name: 'BigModel',
+  path: '/model/:id',
+  component: () => import('../views/BigModel.vue'),
+ 
 }
 ]
 

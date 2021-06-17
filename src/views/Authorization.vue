@@ -30,19 +30,17 @@ name: "Autorization",
             handleSubmit(){
                 for (let user of this.$store.state.userLoad) {
 if (user.name === this.name && user.password === this.password){
-     console.log ("Успешный вход")
+     console.log ("Успешный вход");
+     return;
 }
+        
 else console.log("Некорректные данные");
-                }
-                // if (this.password.length > 0 && this.password.length < 8& this.name.length > 0 && this.name.length < 15 ) {
-                //     this.$http.post('//localhost:3000/login', {
-                //         name: this.name,
-                //         password: this.password
-                //     })
-                   
+                           
                 }
             }
+ }
 }
+            
 </script>
 
 <style scoped>

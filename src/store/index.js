@@ -124,7 +124,12 @@ return getters.categoryModel.length;
     modelById: state => (category) => {//вместо айди передаем все данные которые хотим передать в геттер
       return state.usersModel.filter(model => model.category == category);
 
-    }
+    },
+    bigModelById: state => (id) => {//вместо айди передаем все данные которые хотим передать в геттер
+      return state.usersModel.filter(model => model.id == id)[0];
+
+    },
+
   },
   mutations: {// содержат методы позволяющие изменять состояния хранилища
     basketModel(state, model){

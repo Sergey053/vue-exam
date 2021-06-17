@@ -1,7 +1,8 @@
 <template>
-    <div>
+    <div class="center">
         <h4>Login</h4>
-        <form @submit.prevent="handleSubmit">
+        <form  @submit.prevent="handleSubmit">
+            <div >
             <label for="name" >Name</label>
             <div>
                 <input id="name" type="name" v-model="name" required autofocus>
@@ -16,6 +17,7 @@
                 <button type="submit" >
                     Login
                 </button>
+            </div>
             </div>
         </form>
     </div>
@@ -44,6 +46,12 @@ else console.log("Некорректные данные");
 </script>
 
 <style scoped>
-   
+  .center {
+       /* display: flex; 
+ flex: column;
+
+justify-content: center; */
+ margin-left: 20rem;
+  }
 </style>
 

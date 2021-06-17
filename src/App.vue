@@ -4,13 +4,15 @@
   
 <router-view></router-view>
   </div>
+  
 </template>
 
 <script>
 import SaleHeader from "@/components/SaleHeader";
 
 export default {
-  components: {SaleHeader}, 
+  components: {SaleHeader},
+  
   data(){
     return {
       tabs: [

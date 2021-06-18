@@ -1,6 +1,6 @@
 <template>
   <div>
-      <img v-for="img in state.usersModel.images" class="img"  :src="require('@/assets/' + img)" :key="img"> alt="">
+      <img  class="img"  :src="require('@/assets/' + item_data)" :key="item_data" alt=""> 
   </div>
 </template>
 
@@ -8,14 +8,10 @@
 export default {
 name:"v-carousel-item",
 props: {
-    item_data: {
-        type: Object,
-        default: () => {}
-    }
-},
-data(){
-    return{}
-},
+    item_data: String,
+    
+    },
+
 }
 </script>
 

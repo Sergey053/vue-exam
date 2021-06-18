@@ -1,24 +1,29 @@
 <template>
-<section>
+<section >
 <div class="black margin text">
   <div class="text" >
     <!-- {{ $route.params.category }} -->
   <h3>{{model.title.toUpperCase() }}</h3>
   </div>
- 
-      <div class="text ">
+ <div class="flex-row ">
+      <div class="text col-8 ">
         <p>{{model.full}}</p>
         <p >{{model.price}}</p>
       </div>
-      <div>
-        <v-carousel :carousel_data="usersModel"></v-carousel>
+      <div class="images col-4">
+        <v-carousel
+         :carousel_data="images"
+        :interval="2000"
+        ></v-carousel>
       </div>
        <!-- <div>
          <img class="images"  :src="require('@/assets/' + mod.images)">
       </div> -->
+      </div>
      <div>
-      <button class="button is-success"
+      <button class="bott"
         @click="addToCart(mod)">В корзину</button>
+     
      </div>
  </div>
  </section>
@@ -37,9 +42,14 @@ computed: {
     console.log(this.$route.params.id)
     return this.$store.getters.bigModelById(this.$route.params.id);
   },
-  usersModel(){
-      return  this.$store.state.usersModel;
-}
+  // usersModel(){
+  //     return  this.$store.state.usersModel;
+// },
+ images() {
+       let model = this.$store.getters.bigModelById(this.$route.params.id);
+       return model.images;
+    }
+
 },
 methods:{
   addToCart(mod) {
@@ -56,7 +66,7 @@ methods:{
 }
 .img {
   height: auto;
-  width: 200px;
+  width: 300px;
 }
 .margin {
   margin-left: 2rem;
@@ -65,6 +75,12 @@ methods:{
 .text {
   font-size:20px;
 }
+.flex-row {
+  display: flex;
+  flex: row;
+
+}
+
 .bott{
 display: block;
 font-size: 1.1em;

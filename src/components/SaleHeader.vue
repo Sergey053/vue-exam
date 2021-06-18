@@ -28,6 +28,7 @@ props: {
 <style scoped>
  .nav_item:hover{
         background-color: #f35906;
+        
     }
 
     .header{
